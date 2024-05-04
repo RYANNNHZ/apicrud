@@ -26,3 +26,4 @@ Route::post('/v1/store',[SiswaController::class,'store']);
 Route::delete('/v1/del/{id}',[SiswaController::class,'delSiswa']);
 Route::get('/v1/show/{id}',[SiswaController::class,'show']);
 Route::post('/v1/update/{id}',[SiswaController::class,'upSiswa']);
+

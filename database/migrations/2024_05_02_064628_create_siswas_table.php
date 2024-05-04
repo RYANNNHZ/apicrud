@@ -16,6 +16,7 @@ return new class extends Migration
             $table->char('nama');
             $table->integer('umur');
             $table->string('kelas');
+            $table->string('image_url');
             $table->timestamps();
         });
     }
