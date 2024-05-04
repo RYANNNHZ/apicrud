@@ -32,12 +32,12 @@ class SiswaController extends Controller
         ]);
 
         if($validator->fails()){
-            return response()->json($validator);
+            return response()->json($validator->errors(),400);
         }
 
         $foto = $request->file('file');
         $foto_ekstensi = $foto->extension();
-        $foto_nama = date('ymd').$foto_ekstensi;
+        $foto_nama = date('ymdhis').'.'.$foto_ekstensi;
         $foto->move(public_path('foto'),$foto_nama);
 
         $siswa = siswa::create([
